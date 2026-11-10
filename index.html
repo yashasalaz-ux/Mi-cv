@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi CV - Yasady Shanira Salazar Quispe</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f2f3f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #172b4d;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #f5c6d6;
+      font-size: 17px;
+    }
+
+    nav {
+      background: #e9a5bd;
+      padding: 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #172b4d;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .contenedor {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .presentacion {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      box-shadow: 0 4px 15px #00000015;
+      flex-wrap: wrap;
+    }
+
+    .foto {
+      width: 170px;
+      height: 210px;
+      object-fit: cover;
+      object-position: center;
+      border: 5px solid #e9a5bd;
+      border-radius: 8px;
+    }
+
+    .presentacion-texto {
+      flex: 1;
+      min-width: 230px;
+    }
+
+    .presentacion-texto h2 {
+      color: #172b4d;
+      margin-bottom: 10px;
+    }
+
+    section {
+      background: white;
+      margin-top: 25px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px #00000010;
+    }
+
+    section h2 {
+      color: #172b4d;
+      border-bottom: 3px solid #e9a5bd;
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .habilidades {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .habilidad {
+      background: #fcecf2;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      color: #172b4d;
+    }
+
+    .boton {
+      display: inline-block;
+      background: #172b4d;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 15px;
+      font-size: 15px;
+    }
+
+    .boton:hover {
+      background: #e9a5bd;
+      color: #172b4d;
+    }
+
+    footer {
+      background: #172b4d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 35px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 14px;
+      }
+
+      .presentacion {
+        justify-content: center;
+        text-align: center;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+
+    @media print {
+      nav, .boton {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      .contenedor {
+        margin: 0 auto;
+      }
+
+      section, .presentacion {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Yasady Shanira Salazar Quispe</h1>
+    <p>Estudiante de Producción Audiovisual</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#perfil">Mi perfil</a>
+    <a href="#formacion">Formación</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main class="contenedor">
+
+    <div class="presentacion" id="inicio">
+      <!-- Coloca tu foto en la misma carpeta que index.html
+           y ponle el nombre foto-carnet.jpg -->
+      <img src="foto-carnet.jpg"
+           alt="Fotografía personal"
+           class="foto">
+
+      <div class="presentacion-texto">
+        <h2>¡Hola, soy Yasady!</h2>
+        <p>
+          Soy estudiante de Producción Audiovisual, con interés en el
+          mundo de la comunicación, la creatividad y la edición de videos.
+          Me gusta aprender nuevas herramientas y desarrollar ideas
+          mediante contenidos audiovisuales.
+        </p>
+        <button class="boton" onclick="window.print()">
+          Imprimir mi CV
+        </button>
+      </div>
+    </div>
+
+    <section id="perfil">
+      <h2>Perfil Personal</h2>
+      <p>
+        Soy una persona responsable, creativa, dedicada y con muchas
+        ganas de seguir aprendiendo. Me interesa la producción de
+        contenidos audiovisuales, la edición de videos, la fotografía
+        y la creación de proyectos digitales.
+      </p>
+      <p>
+        Me esfuerzo por cumplir mis actividades, trabajar en equipo
+        y mejorar constantemente mis conocimientos. Busco desarrollar
+        mis capacidades y adquirir experiencia en el ámbito audiovisual.
+      </p>
+    </section>
+
+    <section id="formacion">
+      <h2>Formación Académica</h2>
+      <ul>
+        <li>
+          <strong>Institución:</strong>
+          Instituto de Educación Superior Tecnológico Público de Santa Lucía.
+        </li>
+        <li>
+          <strong>Especialidad:</strong> Producción Audiovisual.
+        </li>
+        <li>
+          <strong>Condición:</strong> Estudiante.
+        </li>
+      </ul>
+    </section>
+
+    <section id="habilidades">
+      <h2>Mis Habilidades</h2>
+      <div class="habilidades">
+        <div class="habilidad">Edición de videos</div>
+        <div class="habilidad">Adobe Premiere Pro</div>
+        <div class="habilidad">Creatividad</div>
+        <div class="habilidad">Fotografía</div>
+        <div class="habilidad">Trabajo en equipo</div>
+        <div class="habilidad">Comunicación</div>
+        <div class="habilidad">Responsabilidad</div>
+        <div class="habilidad">Aprendizaje continuo</div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos e Intereses</h2>
+      <ul>
+        <li>Edición y montaje de videos audiovisuales.</li>
+        <li>Creación de contenidos creativos y digitales.</li>
+        <li>Producción de fotografías y videos.</li>
+        <li>Diseño y elaboración de proyectos audiovisuales.</li>
+        <li>Aprendizaje de nuevas técnicas de edición.</li>
+      </ul>
+    </section>
+
+    <section id="objetivo">
+      <h2>Mi Objetivo Profesional</h2>
+      <p>
+        Mi objetivo es fortalecer mis conocimientos en Producción
+        Audiovisual, mejorar mis habilidades en edición y participar
+        en proyectos donde pueda demostrar mi creatividad, responsabilidad
+        y capacidad de aprendizaje. Deseo crecer profesionalmente y
+        aportar ideas originales en el mundo audiovisual.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Información de Contacto</h2>
+      <p><strong>Nombre:</strong> Yasady Shanira Salazar Quispe</p>
+      <p><strong>Edad:</strong> 20 años</p>
+      <p><strong>Especialidad:</strong> Producción Audiovisual</p>
+      <p><strong>Institución:</strong> Instituto de Educación Superior Tecnológico Público de Santa Lucía</p>
+      <p><strong>Correo:</strong> Escribe aquí tu correo electrónico</p>
+      <p><strong>Teléfono:</strong> Escribe aquí tu número de celular</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="anio"></span> Yasady Shanira Salazar Quispe</p>
+    <p>Currículum Vitae - Producción Audiovisual</p>
+  </footer>
+
+  <script>
+    // Mostrar el año actual automáticamente
+    document.getElementById("anio").textContent =
+      new Date().getFullYear();
+
+    // Mensaje de bienvenida
+    console.log("Bienvenida a mi currículum vitae");
+  </script>
+
+</body>
+</html>
